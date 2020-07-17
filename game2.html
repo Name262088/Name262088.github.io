@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #infobox{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #humanbox{
+            width: 100px;
+        }
+
+        #dickbox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        div {
+            padding:10px;
+            text-align: center;
+        }
+
+        #opperationbox{
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+      let humanscore=0
+      let computerscore=0
+
+      let hemanhand=0;
+      let computerhand=0;
+
+    function refreshUI(){
+
+      let humanhandElement = document.getElementById("humanhand")
+      let computerhandElement = document.getElementById("computerhand")
+      let humanscoreElement = document.getElementById("humanscore")
+      let computerscoreElement = document.getElementById("computerscore")}
+
+
+      computerscoreElement.innerText = "score:" + computerscore;
+      humanscoreElement.innerText = "score:" + humanscore;
+
+      computerhandElement.setAttribute("src", computerhand)
+
+      let pictuername = "玩家头像.jpg"
+
+      if(computerhand === 1 ) {
+          pictuername = "剪刀1.jpg"
+      } else if(computerhand === 2 ){
+          pictuername = "石头1jpg"
+      } else if(computerhand === 3){
+          pictuername = "布1.jpg"
+      }
+
+      if(humanhand === 1 ) {
+          pictuername = "剪刀2.jpg"
+      } else if(humanhand === 2 ){
+          pictuername = "石头2.png"
+      } else if(humanhand === 3){
+          pictuername = "布2.png"
+      }
+
+    </script>
+
+
+    <div id="infobox">
+        <div id="humanbox">
+            <img id="humanhand" scr="玩家头像.jpg" alt=鸡
+            <h5>鸡</h5>
+            <h6 id="humanscore"> score:</h6>
+        </div>
+        <div>
+            <button>begin</button>
+        </div>
+        <div id=dickbox>
+          <img id="computerhand" src="机器人.jpg" alt=大便
+          <h5>垃圾电脑</h5>
+          <h6 id="computerscore"> score:</h6>
+        </div>
+    </div>
+    <div id="operationbox">
+      <button onclick="play(1)">剪刀</button>
+      <button onclick="play(2)">石头</button>
+      <button onclick="play(3)">布</button>
+</div>
+</body>
+</html>
