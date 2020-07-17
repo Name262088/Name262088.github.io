@@ -70,12 +70,33 @@
           pictuername = "布2.png"
       }
 
+
+
+     function start(){
+         alert("start");
+         humanscore = 0
+         computerscore = 0
+         refreshUI();
+     }
+
+     function play(palyerhand){
+         computerhand = Math.ceil(Math.random()*3)
+         humanhand = playerhand;
+            if( humanhand - computerhand === 1 || humanhand - computerhand === -2 ) {
+
+                humanScore ++;
+            } else if(computerhand - humanhand === 1 || computerhand - humanhand === -2) {
+                computerScore ++;
+            }
+            refreshUI();
+        }
+
     </script>
 
 
     <div id="infobox">
         <div id="humanbox">
-            <img id="humanhand" scr="玩家头像.jpg" alt=鸡
+            <img id="humanhand" src="玩家头像.jpg" alt=鸡 width="100px"
             <h5>鸡</h5>
             <h6 id="humanscore"> score:</h6>
         </div>
@@ -83,7 +104,7 @@
             <button>begin</button>
         </div>
         <div id=dickbox>
-          <img id="computerhand" src="机器人.jpg" alt=大便
+          <img id="computerhand" src="机器人.jpg" alt=大便 wifth="100px"
           <h5>垃圾电脑</h5>
           <h6 id="computerscore"> score:</h6>
         </div>
